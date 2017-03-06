@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+        <!-- Test Sessions Tree -->
+        <record model="ir.ui.view" id="test.test_session_list">
+            <field name="name">Test Session List</field>
+            <field name="model">test.test_session</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="duration"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>

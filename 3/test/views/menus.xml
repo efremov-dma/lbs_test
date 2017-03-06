@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="test.test_action_window">
+            <field name="name">test window</field>
+            <field name="res_model">test.test</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- actions opening views on models -->
+        <record model="ir.actions.act_window" id="test.test_session_action_window">
+            <field name="name">test window</field>
+            <field name="res_model">test.test_session</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!-- Top menu item -->
+        <menuitem name="test" id="test.menu_root"/>
+
+        <!-- Sub menu items -->
+        <menuitem name="Tests" id="test.menu_tests" parent="test.menu_root"/>
+        <menuitem name="Test sessions" id="test.menu_test_sessions" parent="test.menu_root"/>
+
+        <!-- Actions -->
+        <menuitem
+                name="List"
+                id="test.menu_test_list"
+                parent="test.menu_tests"
+                action="test.test_action_window"/>
+
+        <menuitem
+                name="List"
+                id="test.menu_test_session_list"
+                parent="test.menu_test_sessions"
+                action="test.test_session_action_window"/>
+
+    </data>
+</odoo>

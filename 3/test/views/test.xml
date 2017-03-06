@@ -1,0 +1,15 @@
+<odoo>
+    <data>
+        <!-- Tests Tree -->
+        <record model="ir.ui.view" id="test.test_list">
+            <field name="name">Test List</field>
+            <field name="model">test.test</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+                    <field name="purpose"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
